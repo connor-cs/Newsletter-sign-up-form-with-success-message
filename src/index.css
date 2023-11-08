@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -54,6 +54,10 @@ button:hover {
 .error-msg {
   color: hsl(4, 100%, 67%);
   margin-left: 1rem;
+}
+
+.email {
+  font-weight: bold;
 }
 
 form {
@@ -114,10 +118,7 @@ li {
   padding: .2rem;
 }
 
-p>span {
-  font-weight: bold;
-  color: hsl(234, 29%, 20%);
-}
+
 
 .success-container {
   background-color: white;

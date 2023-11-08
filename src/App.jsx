@@ -4,27 +4,29 @@ import Success from "./Success";
 
 function App() {
   const [valid, setValid] = useState(true);
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState("");
 
+  //this is for submission
   function isValid(e) {
     e.preventDefault();
-    checkValid()
-    if (valid) setSuccess(true)
+    checkValid();
+    if (valid && email.length > 0) setSuccess(true);
   }
 
+  //simply checks validity onblur events and for submission event
   const checkValid = () => {
     const pattern = /\S+@\S+\.\S+/;
     if (!pattern.test(email)) {
       setValid(false);
     } else setValid(true);
     console.log(valid);
-  }
+  };
 
   //the main section could be abstracted out into a seperate component but whatever it's fine
   return (
     <>
-      {success? (
+      {success ? (
         <Success email={email} valid={valid} setSuccess={setSuccess} />
       ) : (
         <div className="body">
