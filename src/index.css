@@ -55,7 +55,7 @@ button:hover {
   color: hsl(4, 100%, 67%);
   margin-left: 1rem;
 }
-//
+
 .email {
   font-weight: bold;
 }
@@ -92,7 +92,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  text-align: left;
   padding: 2rem;
   font-weight: 400;
 }
@@ -124,10 +124,14 @@ li {
   background-color: white;
   border-radius: 20px;
   color: hsl(234, 29%, 20%);
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   place-content: flex-start;
+  max-width: 40%;
+  text-align: left;
+  /* why does margin: 0 auto center this div??? */
+  margin: 0 auto;
 }
 
 .success-container>img {
