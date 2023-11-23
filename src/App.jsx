@@ -14,7 +14,7 @@ function App() {
     if (valid && email.length > 0) setSuccess(true);
   }
 
-  //simply checks validity onblur events and for submission event
+  //checks validity onblur events and for submission event
   const checkValid = () => {
     const pattern = /\S+@\S+\.\S+/;
     if (!pattern.test(email)) {
@@ -27,14 +27,14 @@ function App() {
   return (
     <>
       {success ? (
-        <Success email={email} valid={valid} setSuccess={setSuccess} />
+        <Success email={email} valid={valid} setSuccess={setSuccess} setEmail={setEmail}/>
       ) : (
         <div className="body">
           <div className="main-container">
             <div className="left">
               <h1>Stay updated!</h1>
               <p>Join 60,000+ product managers receiving onthly updates on:</p>
-              <ul>
+              <ul >
                 <li>
                   <img
                     src="/images/icon-list.svg"
@@ -76,7 +76,7 @@ function App() {
                     className={valid ? null : "invalid"}
                     required
                     pattern="/\S+@\S+\.\S+/"
-                    // onFocus={() => checkValid()}
+                    onFocus={() => checkValid()}
                     onBlur={() => checkValid()}
                     onChange={(e) => setEmail(e.target.value)}
                   />
