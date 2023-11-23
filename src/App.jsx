@@ -27,14 +27,19 @@ function App() {
   return (
     <>
       {success ? (
-        <Success email={email} valid={valid} setSuccess={setSuccess} setEmail={setEmail}/>
+        <Success
+          email={email}
+          valid={valid}
+          setSuccess={setSuccess}
+          setEmail={setEmail}
+        />
       ) : (
         <div className="body">
           <div className="main-container">
             <div className="left">
               <h1>Stay updated!</h1>
               <p>Join 60,000+ product managers receiving onthly updates on:</p>
-              <ul >
+              <ul>
                 <li>
                   <img
                     src="/images/icon-list.svg"
